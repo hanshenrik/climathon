@@ -1,0 +1,68 @@
+- data struktur:
+  - hva finnes?
+  - hvordan bør det være?
+  - hva trengs?
+    - få med info om hva slags område sensoren står i (trafikklys, i skogen, etc.)
+
+Okumura-Hata propagation model (5 Cellular networks p. 14)
+
+businessmodell:
+  - opp mot Trådløse Trondheim, altså bruke deres infrastruktur?
+  - sette opp egen LoRa gateway?
+  - 
+
+Hvilken frekvens har kommunen på måling nå? Månedlig?
+Hvilken frekvens ønskes?
+Hvordan ønskes dataen presentert?
+
+Sensor:
+  - rapporter metadata også (batteritilstand, etc.)
+
+Argumenter for valg av teknologi!
+
+Loose couplings på interfaces!
+
+CO2-måling:
+  - flere faktorer
+  - trykk
+  - temp
+  - høyde
+  - Remember that current weather might affect measured levels. Couple with open data from YR?
+
+GPS har ikke høyde! ()
+
+Trenger vi GPS koordinater på målerene? Eller kan vi bare vite at node 5 er på lat,lan?
+
+Øk/senk frekvens basert på endring fra forrige måling
+
+Spørsmål
+  - frekvens på målinger?
+    * idag: årlig for trondheim kommune som geografisk enhet (ikke som organisasjon)
+    * sanntid.
+    * hvertfall muliggjøre å se hvordan tiltak funker / ikke funker
+  - steder?
+    * der trafikken er størst
+  - hvordan visualisert?
+    * to målgrupper
+      - politikere
+      - publikum/innbyggere
+    *
+    - kart med sensorer som punkter
+      - kanskje intensiv til konkurranse mellom 
+    - kontinuerlig graf per sensor
+
+  * SSB slutta fordi
+    - usikkerhet rundt kvalitet
+    - tiltak ikke reflektert i statistikken
+    - trafikktellinger + trafikkmodellering (tror Simon)
+    - TODO: finn rapport som evt. sier noe om at resultatene ikke var gode og hvorfor de ikke var det (og ikke gjør samme feil!)
+
+Lag åpent api, så alle kan lage forskjellige visualiseringer!
+
+Si noe om direkte/indirekte måling
+
+http://thethingsnetwork.org/api/v0/nodes/02031001/ - den dingsen til Thomas sender hit.
+http://thethingsnetwork.org/api/v0/nodes/02031010/ - eksempel
+
+Endre linje 9 i https://developer.mbed.org/users/tamberg/code/LoRaWAN_send_text/file/d2eb917f9883/main.cpp til #define LORAWAN_DEV_ADDR (uint32_t) 0x5A48003
+Da kommer data hit: http://thethingsnetwork.org/api/v0/nodes/02031003/
