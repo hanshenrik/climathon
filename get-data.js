@@ -53,7 +53,7 @@ $(document).ready(function() {
   $("#generate-dygraph").click(draw_dygraph)
   $("#generate-dygraph-mock").click(draw_dygraph_mock)
   $("#generate-many-markers").click(function() {
-    for (i = 0; i < 500; i++) { 
+    for (i = 0; i < 500; i++) {
       var lat = 63.436 -(Math.random()*0.05)
       var lon = 10.34 + (Math.random()*0.1)
       L.marker([lat, lon])
