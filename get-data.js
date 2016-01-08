@@ -1,4 +1,5 @@
 var node_euis = ['02031010', '02031001'];
+var data_from_ttn = [];
 
 $(document).ready(function() {
 
@@ -19,6 +20,15 @@ $(document).ready(function() {
           data[0]['data_plain'] + " (measured " + data[0]['time'] + ")")
           .openPopup();
         $.each(data, function(k, v) {
+          // DEV only put data from one node in the dygraph!
+          if (node_eui === '02031010') {
+            var date = new Date(this['time'])
+            // console.log(date)
+
+            // TODO make sure we retrieve a number from the sensor. If not number, something is probably wrong, notify someone somehow
+            // data_from_ttn.push( [date, this['data_plain']] )
+            data_from_ttn.push( [date, Math.floor(Math.random() * (800 - 200) + 200)] )
+          }
           // console.log(this['data_plain'] + ': ' + k)
           // $('#result').append('<p>#' + k + ': ' + this['data_plain'] + ' (' + this['time'] + ')</p>')
             /// do stuff
@@ -26,4 +36,7 @@ $(document).ready(function() {
       });
     
   })
+
+  $("#generate-dygraph").click(draw_dygraph)
+  $("#generate-dygraph-mock").click(draw_dygraph_mock)
 })

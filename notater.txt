@@ -66,3 +66,7 @@ http://thethingsnetwork.org/api/v0/nodes/02031010/ - eksempel
 
 Endre linje 9 i https://developer.mbed.org/users/tamberg/code/LoRaWAN_send_text/file/d2eb917f9883/main.cpp til #define LORAWAN_DEV_ADDR (uint32_t) 0x5A48003
 Da kommer data hit: http://thethingsnetwork.org/api/v0/nodes/02031003/
+
+Diffusjonsmodell
+  - vind, høyde, avstand fra utslipps"gjenstand" (bil/hus) har noe å si
+  - 
