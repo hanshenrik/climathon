@@ -1,0 +1,13 @@
+- show that missing data is not a problem in visualisation by zooming in on mock data graph
+- mention LoRa features (Thomas slide?):
+  - low battery consumption
+  - long range
+- show "Request node here" feature
+
+
+start med flux towers
+store, vanskelige, dyre
+
+flux = 1
+smart blabalba = under 200
+LoRa = nesten 1000

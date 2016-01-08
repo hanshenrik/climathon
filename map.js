@@ -1,6 +1,6 @@
 var map = L.map('map', {
   center: [63.4297, 10.3933],
-  dragging: false,
+  // dragging: false,
   scrollWheelZoom: false,
   maxZoom: 18,
   zoom: 14
@@ -14,12 +14,6 @@ L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={
 
 // TODO: choose most appealing layout for pitch
 // id: one of these https://www.mapbox.com/developers/api/maps/#tiles
-
-var circle = L.circle([63.4297, 10.4133], 500, {
-  color: 'red',
-  fillColor: '#f03',
-  fillOpacity: 0.5
-}).addTo(map);
 
 // var polygon = L.polygon([
 //   [63.4297, 10.3930],

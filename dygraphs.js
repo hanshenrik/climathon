@@ -8,7 +8,7 @@ function draw_dygraph() {
     new Dygraph(dygraph_div, data_from_ttn.reverse(), { 
       labels: [ "x", "02031010" ],
       legend: 'always',
-      title: 'Readings from node 02031010',
+      // title: 'Readings from node 02031010',
       showRoller: true,
       rollPeriod: 1, // # of days to average over
       // customBars: true, // val;lower;upper
@@ -22,7 +22,7 @@ function draw_dygraph_mock() {
 
     new Dygraph(dygraph_div, "ny-vs-sf.txt", {
       legend: 'always',
-      title: 'Readings from mulitple nodes (mock data)',
+      // title: 'Readings from mulitple nodes (mock data)',
       showRoller: true,
       rollPeriod: 1, // # of days to average over
       customBars: true, // val;lower;upper

@@ -1,5 +1,6 @@
 var node_euis = ['02031010', '02031001'];
 var data_from_ttn = [];
+var lat = 63.433297
 
 $(document).ready(function() {
 
@@ -14,20 +15,31 @@ $(document).ready(function() {
         //   console.log("No data for node "+node_eui)
         // }
         console.log("Got data from node: " + node_eui + "!")
-        var lon = (node_eui === '02031010') ? 10.4000 : 10.3900
-        var marker = L.marker([63.4297, lon]).addTo(map);
-        marker.bindPopup("<b>Node "+node_eui+"</b><br>Latest CO2 level: "+
-          data[0]['data_plain'] + " (measured " + data[0]['time'] + ")")
-          .openPopup();
+        var lon = (node_eui === '02031010') ? 10.4000 : 10.395277
+        var marker = L.marker([lat, lon]).addTo(map);
+        marker.bindPopup("<b>Node "+node_eui+"</b><br><b>Latest CO2 level</b>: "+
+          data[0]['data_plain'] + "<br><b>Time</b>: " + data[0]['time'] + "")
         $.each(data, function(k, v) {
           // DEV only put data from one node in the dygraph!
           if (node_eui === '02031010') {
             var date = new Date(this['time'])
+            var value = Math.floor(Math.random() * (800 - 200) + 200) // this['data_plain'] OR this[data_something]
+            // TODO make sure we retrieve a number from the sensor. If not number, something is probably wrong, notify someone somehow
+            
             // console.log(date)
 
-            // TODO make sure we retrieve a number from the sensor. If not number, something is probably wrong, notify someone somehow
-            // data_from_ttn.push( [date, this['data_plain']] )
-            data_from_ttn.push( [date, Math.floor(Math.random() * (800 - 200) + 200)] )
+            if ( (k == data.length - 1) && (value > 700) ) {
+              console.log(k + " this is last element and value was higher than 300")
+              var circle = L.circle([lat, lon], 200, {
+                color: 'red',
+                fillColor: '#f03',
+                fillOpacity: 0.5
+              }).addTo(map);
+              warningCircleDrawn = true;
+            }
+
+            // data_from_ttn.push( [date, value] )
+            data_from_ttn.push( [date, value] )
           }
           // console.log(this['data_plain'] + ': ' + k)
           // $('#result').append('<p>#' + k + ': ' + this['data_plain'] + ' (' + this['time'] + ')</p>')
@@ -39,4 +51,13 @@ $(document).ready(function() {
 
   $("#generate-dygraph").click(draw_dygraph)
   $("#generate-dygraph-mock").click(draw_dygraph_mock)
+  $("#generate-many-markers").click(function() {
+    for (i = 0; i < 300; i++) { 
+      var lat = 63.436 -(Math.random()*0.05)
+      var lon = 10.34 + (Math.random()*0.1)
+      L.marker([lat, lon])
+        .addTo(map)
+        .bindPopup("<b>Node X</b><br><b>Latest CO2 level</b>: 400<br><b>Time</b>: 2016-01-07T17:04:42.453Z");
+    }
+  })
 })
