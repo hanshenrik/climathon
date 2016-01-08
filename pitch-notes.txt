@@ -11,3 +11,29 @@ store, vanskelige, dyre
 flux = 1
 smart blabalba = under 200
 LoRa = nesten 1000
+
+
+
+v1
+---
+1: overskriftsfarge
+
+SSB problem: mention goals are set
+Immidiate feedback: see which policies/measures have an effect
+
+v2
+---
+1: cheaper and more scalable - GOOD
+
+3: created a prototype sensor
+
+demo:
+  - on Generate markers: "can look something like this"
+
+v3
+---
+"no data" --> "or very infrequent"
+
+v4
+---
+everything runs through the internet
