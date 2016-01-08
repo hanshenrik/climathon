@@ -1,0 +1,68 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>CO2 Sensor Map</title>
+
+  <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.css" />
+  <script src="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-alpha1/jquery.min.js"></script>
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/1.0.2/Chart.min.js"></script> -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/dygraph/1.1.1/dygraph-combined.js"></script>
+  
+  <style>
+    #map { width: 100%; height: 400px; }
+    #chartjs-div { width: 100%; height: 200px; }
+    #dygraph-div, #dygraph-div-mock { width: 100%; height: 200px; }
+    h1 {
+      font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+      font-weight: 100;
+      text-align: center;
+    }
+    hr {
+      margin: 30px auto;
+      border: 0;
+      border-top: 1px solid #ccc;
+      width: 80%;
+    }
+  </style>
+</head>
+
+<body>
+
+<!-- THE MAP -->
+<h1>Map overview</h1>
+<div id="map"></div>
+<button id="generate-many-markers">Generate markers</button>
+<button id="add-circle">Add circle</button>
+
+<!-- <hr /> -->
+
+<!-- DYGRAPHS JS -->
+<h1>Our data (from open API)</h1>
+<button id="generate-dygraph">Generate dygraph</button>
+<div id="dygraph-div"></div>
+
+<!-- <hr /> -->
+
+<h1>Mock data</h1>
+<button id="generate-dygraph-mock">Generate dygraph</button>
+<div id="dygraph-div-mock"></div>
+
+
+<!-- CHART JS -->
+<!-- <canvas id="chartjs-div"></canvas> -->
+
+<!-- DEV PRINTING -->
+<!-- <div id="result"></div> -->
+
+
+<script src="map.js"></script>
+<script src="get-data.js"></script>
+<!-- <script src="chartjs.js"></script> -->
+<script src="dygraphs.js"></script>
+
+
+</body>
+</html>
