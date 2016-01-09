@@ -31,9 +31,9 @@ for (i = 0; i < 200; i++) {
   var lat = 63.436 -(Math.random()*0.05)
   var lon = 10.34 + (Math.random()*0.1)
   var value = Math.floor(Math.random() * 700) + 300;
-  var color = "blue"
-  if (value > 800) color = "red"
-  if (value < 400) color = "green"
+  var color = "blue";
+  if (value > 800) color = "red";
+  if (value < 400) color = "green";
 
   L.circleMarker([lat, lon],
     {
@@ -52,13 +52,6 @@ function onMapClick(e) {
 }
 
 map_the_feature.on('click', onMapClick);
-// Create some marker that will be resized on the map zooming
-var myMarker = new L.CircleMarker([63.436,10.34], { /* Options */ });
-myMarker.addTo(map_the_feature)
-map_the_feature.on('zoomend', function() {
-  var currentZoom = map_the_feature.getZoom();
-  myMarker.setRadius(currentZoom);
-});
 
 // var polygon = L.polygon([
 //   [63.4297, 10.3930],
