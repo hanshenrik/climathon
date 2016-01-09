@@ -20,7 +20,7 @@ function draw_dygraph() {
 function draw_dygraph_mock() {
     var dygraph_div = document.getElementById("dygraph-div-mock")
 
-    new Dygraph(dygraph_div, "ny-vs-sf.txt", {
+    new Dygraph(dygraph_div, "mock-data.txt", {
       legend: 'always',
       // title: 'Readings from mulitple nodes (mock data)',
       showRoller: true,
