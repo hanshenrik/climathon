@@ -16,6 +16,7 @@ function draw_real_time_graph() {
 
   var g = new Dygraph(real_time_graph, data,
     {
+      color: 'green',
       legend: 'always',
       drawPoints: true,
       // showRoller: true,
@@ -38,8 +39,9 @@ function draw_compare_data_graph() {
 
   new Dygraph(compare_data_graph, "mock-data.txt", { // TODO: add more nodes and better values to mock data file
     legend: 'always',
+    colors: ['green', 'darkblue'],
     // title: 'Readings from mulitple nodes (mock data)',
-    showRoller: true,
+    // showRoller: true,
     rollPeriod: 1, // # of days to average over
     customBars: true, // val;lower;upper
     ylabel: 'CO2 (ppm)',

@@ -21,16 +21,29 @@ h1 {
 h2 {
   font-weight: 200;
 }
+header h1 {
+  font-size: 70px;
+  margin-bottom: 0;
+}
 
 hr {
   margin: 30px auto;
   border: 0;
   border-top: 1px solid #ccc;
+}
+hr.w-80 {
   width: 80%;
+}
+hr.w-50 {
+  width: 50%;
 }
 
 .text-center {
   text-align: center;
+}
+
+.container-fluid > .row > div[class*="col-"] {
+  padding: 0;
 }
 
 .fa-big {
