@@ -2,7 +2,7 @@ var today_map;
 var future_map;
 
 $(document).ready(function () {
-  today_map = draw_today_map();
+  // today_map = draw_today_map();
   future_map = draw_future_map();
 });
 
@@ -58,8 +58,8 @@ function draw_future_map() {
     var lon = 10.33 + (Math.random()*0.15)
     var value = Math.floor(Math.random() * 700) + 300;
     var color = "blue";
-    if (value > 800) color = "red";
-    if (value < 400) color = "green";
+    if (value > 950) color = "red";
+    if (value < 650) color = "green";
 
     L.circleMarker([lat, lon],
       {
