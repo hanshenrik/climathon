@@ -26,52 +26,66 @@
 
   <div class="container">
     <div class="row">
+      <div class="col-md-12 text-center">
+        <header>
+          <h1>Climathon 2016</h1>
+          2016-01-07, Trondheim, Norway
+        </header>
+      </div>
+    </div>
+
+    <hr class="w-50" />
+
+    <div class="row">
       <div class="col-md-5 col-md-offset-1">
         <h1>The problem</h1>
-        At the <a href="http://www.carbontrackandtrace.com/climathon2016">Climathon</a> event three problems were addressed:
+        <p>At the <a href="http://www.carbontrackandtrace.com/climathon2016">Climathon</a> event three problems were addressed:
         <ul>
-          <li>How can you use existing open data sets to calibrate and check official reported emissions to better understand city emissions?</li>
+          <li>How can we use existing open data sets to calibrate and check official reported emissions to better understand city emissions?</li>
           <li>How can the data from ground-level emissions sensors be integrated and used to drive change?</li>
-          <li>Existing sensor systems are expensive, so can we build cheaper, open source sensor systems?</li>
+          <li>Existing sensor systems are expensive. How can we build cheaper, open source sensor systems?</li>
         </ul>
+        </p>
+
       </div>
       <div class="col-md-5 text-center">
         <i class="fa fa-question-circle fa-big"></i>
       </div>
     </div>
-  </div>
 
-  <hr />
+    <hr class="w-50" />
 
-  <div class="container">
     <div class="row">
       <div class="col-md-5 col-md-push-6">
         <h1>The situation today</h1>
-        There are currently 4 stations reporting air quality to the public in Trondheim. This data is available at <a href="http://luftkvalitet.info/home.aspx?type=1&amp;topic=1&amp;id=%7bba5403d7-522e-481b-a791-6148c8c6d0b4%7d">luftkvalitet.info</a> and it looks like this.
+        <p>For many years, <a href="https://trondheim.kommune.no">Trondheim Municipality</a> depended on <b>yearly reports</b> from <a href="https://ssb.no">Statistics Norway</a> (SSB).</p>
+
+        <p>Because of uncertainties regarding the quality of this data, SSB decided to discontinue these yearly reports in 2012.<sup><a href="https://www.trondheim.kommune.no/content/1117741651/Utslipp-av-klimagasser-i-Trondheim">1</a></sup></p>
+
+        <p>Trondheim Municipality is therefore acting somewhat in the dark when trying to figure out how to reach their goal of reducing the municipality's GHG emission levels by 25% by 2020 and 70-90% by 2050 (compared to 1991 levels).<sup><a href="http://www.trondheim.kommune.no/klima">2</a></sup></p>
       </div>
-      <div class="col-md-6 col-md-pull-5">
-        <div id="today-map" class="map"></div>
+      <div class="col-md-5 col-md-pull-4">
+        <img src="https://www.trondheim.kommune.no/multimedia/1115028767/UtlsippTrondheim.png" class="img-responsive" />
       </div>
     </div>
-  </div>
 
-  <hr />
+    <hr class="w-50" />
   
-  <div class="container">
     <div class="row">
       <div class="col-md-5 col-md-offset-1">
         <h1>Our approach</h1>
         <h2>Real time data, not annual reports</h2>
-        During the 24 hour hackathon we made a sensor that measured the CO<sub>2</sub> level and reported this in real time to the cloud. We then retrieved this data through an open API and displayed it on a website.
+        During the 24 hour hackathon we made a sensor that measured the CO<sub>2</sub> level and reported this in real time to the cloud. We then retrieved this data through an open API and displayed it on a website. This way, the municipality can get immediate feedback on the effects of policies.
       </div>
-      <div class="col-md-6">
+      <div class="col-md-5">
         <div id="real-time-graph" class="graph"></div>
       </div>
     </div>
+    
+    <hr class="w-50" />
+
   </div>
 
-  <hr />
-  
   <div class="container-fluid">
     <div class="row">
       <div class="col-md-12 text-center">
@@ -79,18 +93,68 @@
         <div id="future-map" class="map"></div>
       </div>
     </div>
+  
+    <hr class="w-50" />
+  
   </div>
 
-  <hr />
-  
   <div class="container">
     <div class="row">
       <div class="col-md-5 col-md-offset-1">
         <h1>Compare data</h1>
         See how emissions in different areas evolves. Get immidiate feedback on effects of policies.
       </div>
-      <div class="col-md-6">
+      <div class="col-md-5">
         <div id="compare-data-graph" class="graph"></div>
+      </div>
+    </div>
+
+    <hr class="w-50" />
+
+    <div class="row">
+      <div class="col-md-5 col-md-push-6">
+        <h1>Other initiatives</h1>
+        <h2>luftkvalitet.info</h2>
+        <p>There are currently 4 stations reporting air quality in real time to the public in Trondheim, available at <a href="http://luftkvalitet.info/home.aspx?type=1&amp;topic=1&amp;id=%7bba5403d7-522e-481b-a791-6148c8c6d0b4%7d">luftkvalitet.info</a></p>
+        <!-- <p>TODO: comapre price of these censors to our.</p> -->
+      </div>
+      <div class="col-md-5 col-md-pull-4 text-center">
+        <i class="fa fa-cubes fa-big"></i>
+        <!-- <div id="today-map" class="map"></div> -->
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-12 text-center" style="font-size: 30px;">
+        <h1>Use these?</h1>
+        <i class="fa fa-binoculars"></i>
+        <i class="fa fa-battery-full"></i>
+        <i class="fa fa-cloud"></i>
+        <i class="fa fa-cogs"></i>
+        <i class="fa fa-code"></i>
+        <i class="fa fa-eye"></i>
+        <i class="fa fa-eyedropper"></i>
+
+        <br />
+        
+        <i class="fa fa-long-arrow-right"></i>
+        <i class="fa fa-check-square-o"></i>
+
+        <br />
+        
+        <i class="fa fa-child"></i>
+        <i class="fa fa-users"></i>
+        <i class="fa fa-leaf"></i>
+        <i class="fa fa-tree"></i>
+        <i class="fa fa-car"></i>
+        <i class="fa fa-bicycle"></i>
+
+        <br />
+
+        <i class="fa fa-area-chart"></i>
+        <i class="fa fa-pie-chart"></i>
+        <i class="fa fa-bar-chart"></i>
+        <i class="fa fa-line-chart"></i>
       </div>
     </div>
   </div>
