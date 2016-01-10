@@ -9,7 +9,7 @@ $(document).ready(function() {
 
   $.each( node_euis, function(i, node_eui) {
     console.log("Getting data from node: " + node_eui);
-    $.get( "http://thethingsnetwork.org/api/v0/nodes/" + node_eui)
+    $.get( "//thethingsnetwork.org/api/v0/nodes/" + node_eui)
       .done(function( data ) {
         // if (!data) {
         //   console.log("No data for node "+node_eui)

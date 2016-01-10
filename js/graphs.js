@@ -37,7 +37,7 @@ function draw_real_time_graph() {
 function draw_compare_data_graph() {
   var compare_data_graph = document.getElementById('compare-data-graph')
 
-  new Dygraph(compare_data_graph, "mock-data.txt", { // TODO: add more nodes and better values to mock data file
+  new Dygraph(compare_data_graph, "/climathon/mock-data.txt", { // TODO: add more nodes and better values to mock data file
     legend: 'always',
     colors: ['green', 'darkblue'],
     // title: 'Readings from mulitple nodes (mock data)',
