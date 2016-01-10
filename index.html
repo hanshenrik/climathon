@@ -3,56 +3,101 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <title>CO2 Sensor Map</title>
+  <title>The future of GHG emission monitoring</title>
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <script src="//cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/leaflet.js"></script>
   <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-alpha1/jquery.min.js"></script>
   <script src="//cdnjs.cloudflare.com/ajax/libs/dygraph/1.1.1/dygraph-combined.js"></script>
-  
+
+
   <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/leaflet.css" />
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css" />
+  <link rel="stylesheet" href="bootstrap-custom.min.css" />
   <link rel="stylesheet" href="style.css" />
+
+  <link rel="icon" type="image/png" href="favicon.png" />
 </head>
 
 <body>
 
-<h1>The problem</h1>
-At the <a href="http://www.carbontrackandtrace.com/climathon2016">Climathon</a> event three problems were addressed:
-<ul>
-  <li>How can you use existing open data sets to calibrate and check official reported emissions to better understand city emissions?</li>
-  <li>How can the data from ground-level emissions sensors be integrated and used to drive change?</li>
-  <li>Existing sensor systems are expensive, so can we build cheaper, open source sensor systems?</li>
-</ul>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-5 col-md-offset-1">
+        <h1>The problem</h1>
+        At the <a href="http://www.carbontrackandtrace.com/climathon2016">Climathon</a> event three problems were addressed:
+        <ul>
+          <li>How can you use existing open data sets to calibrate and check official reported emissions to better understand city emissions?</li>
+          <li>How can the data from ground-level emissions sensors be integrated and used to drive change?</li>
+          <li>Existing sensor systems are expensive, so can we build cheaper, open source sensor systems?</li>
+        </ul>
+      </div>
+      <div class="col-md-5 text-center">
+        <i class="fa fa-question-circle fa-big"></i>
+      </div>
+    </div>
+  </div>
 
-<h1>The situation today</h1>
----Map with actual markers existing today---
-<div id="map-today" class="map"></div>
+  <hr />
 
-<h1>Our approach</h1>
-<h2>Real time data, not annual reports</h2>
-During the 24 hour hackathon we made a sensor that measured the CO<sub>2</sub> level and reported this in real time to the cloud. We then retrieved this data through an open API and displayed it on a website.
+  <div class="container">
+    <div class="row">
+      <div class="col-md-5 col-md-push-6">
+        <h1>The situation today</h1>
+        There are currently 4 stations reporting air quality to the public in Trondheim. This data is available at <a href="http://luftkvalitet.info/home.aspx?type=1&amp;topic=1&amp;id=%7bba5403d7-522e-481b-a791-6148c8c6d0b4%7d">luftkvalitet.info</a> and it looks like this.
+      </div>
+      <div class="col-md-6 col-md-pull-5">
+        <div id="today-map" class="map"></div>
+      </div>
+    </div>
+  </div>
 
-<div id="real-time-graph" class="graph"></div>
+  <hr />
+  
+  <div class="container">
+    <div class="row">
+      <div class="col-md-5 col-md-offset-1">
+        <h1>Our approach</h1>
+        <h2>Real time data, not annual reports</h2>
+        During the 24 hour hackathon we made a sensor that measured the CO<sub>2</sub> level and reported this in real time to the cloud. We then retrieved this data through an open API and displayed it on a website.
+      </div>
+      <div class="col-md-6">
+        <div id="real-time-graph" class="graph"></div>
+      </div>
+    </div>
+  </div>
 
-<h1>The feature</h1>
-<h2>Comprehensible overview</h2>
-<div id="map-the-feature" class="map"></div>
-<button id="generate-many-markers">Generate markers</button>
-<button id="add-circle">Add circle</button>
+  <hr />
+  
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-12 text-center">
+        <h1>The future</h1>
+        <div id="future-map" class="map"></div>
+      </div>
+    </div>
+  </div>
 
-<h2>Compare data</h2>
-See how emissions in different areas evolves. Get immidiate feedback on effects of policies.
-<div id="compare-data-graph" class="graph"></div>
+  <hr />
+  
+  <div class="container">
+    <div class="row">
+      <div class="col-md-5 col-md-offset-1">
+        <h1>Compare data</h1>
+        See how emissions in different areas evolves. Get immidiate feedback on effects of policies.
+      </div>
+      <div class="col-md-6">
+        <div id="compare-data-graph" class="graph"></div>
+      </div>
+    </div>
+  </div>
 
-<h1>People</h1>
-<ul>
-  <li>Fredrik</li>
-  <li>Edvard</li>
-  <li>Hans Henrik</li>
-</ul>
-
-<script src="maps.js"></script>
-<script src="get-data.js"></script>
-<script src="graphs.js"></script>
+  <script src="maps.js"></script>
+  <script src="get-data.js"></script>
+  <script src="graphs.js"></script>
 
 </body>
 </html>

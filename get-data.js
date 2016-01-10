@@ -19,10 +19,10 @@ $(document).ready(function() {
         var marker = L.circleMarker([lat, lon],
           {
             color: 'black',
-            fillOpacity: .5,
-            radius: 40
+            // fillOpacity: .5,
+            // radius: 40
           })
-          .addTo(map_the_feature)
+          .addTo(future_map)
           .bindPopup("<b>Node "+node_eui+"</b><br><b>Latest CO2 level</b>: "+
             data[0]['data_plain'] + "<br><b>Time</b>: " + data[0]['time'] + "")
         $.each(data, function(k, v) {
@@ -40,7 +40,7 @@ $(document).ready(function() {
             //     color: 'red',
             //     fillColor: '#f03',
             //     fillOpacity: 0.5
-            //   }).addTo(map_the_feature);
+            //   }).addTo(future_map);
             //   warningCircleDrawn = true;
             // }
 
@@ -60,6 +60,6 @@ $(document).ready(function() {
       color: 'red',
       fillColor: '#f03',
       fillOpacity: 0.5
-    }).addTo(map_the_feature);
+    }).addTo(future_map);
   })
 })
